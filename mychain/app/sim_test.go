@@ -32,11 +32,11 @@ import (
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
 
-	"github.com/WonderJL/ignite-getting-start/app"
+	"mychain/app"
 )
 
 const (
-	SimAppChainID = "ignite-getting-start-simapp"
+	SimAppChainID = "mychain-simapp"
 )
 
 var FlagEnableStreamingValue bool

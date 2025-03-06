@@ -75,15 +75,15 @@ import (
 	ibctransferkeeper "github.com/cosmos/ibc-go/v8/modules/apps/transfer/keeper"
 	ibckeeper "github.com/cosmos/ibc-go/v8/modules/core/keeper"
 
-	ignitegettingstartmodulekeeper "github.com/WonderJL/ignite-getting-start/x/ignitegettingstart/keeper"
+	mychainmodulekeeper "mychain/x/mychain/keeper"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
-	"github.com/WonderJL/ignite-getting-start/docs"
+	"mychain/docs"
 )
 
 const (
 	AccountAddressPrefix = "cosmos"
-	Name                 = "ignite-getting-start"
+	Name                 = "mychain"
 )
 
 var (
@@ -141,7 +141,7 @@ type App struct {
 	ScopedICAHostKeeper       capabilitykeeper.ScopedKeeper
 	ScopedKeepers             map[string]capabilitykeeper.ScopedKeeper
 
-	IgnitegettingstartKeeper ignitegettingstartmodulekeeper.Keeper
+	MychainKeeper mychainmodulekeeper.Keeper
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
 
 	// simulation manager
@@ -245,7 +245,7 @@ func New(
 		&app.NFTKeeper,
 		&app.GroupKeeper,
 		&app.CircuitBreakerKeeper,
-		&app.IgnitegettingstartKeeper,
+		&app.MychainKeeper,
 		// this line is used by starport scaffolding # stargate/app/keeperDefinition
 	); err != nil {
 		panic(err)

@@ -53,9 +53,9 @@ import (
 	ibcexported "github.com/cosmos/ibc-go/v8/modules/core/exported"
 	"google.golang.org/protobuf/types/known/durationpb"
 
-	ignitegettingstartmodulev1 "github.com/WonderJL/ignite-getting-start/api/ignitegettingstart/ignitegettingstart/module"
-	_ "github.com/WonderJL/ignite-getting-start/x/ignitegettingstart/module" // import for side-effects
-	ignitegettingstartmoduletypes "github.com/WonderJL/ignite-getting-start/x/ignitegettingstart/types"
+	mychainmodulev1 "mychain/api/mychain/mychain/module"
+	_ "mychain/x/mychain/module" // import for side-effects
+	mychainmoduletypes "mychain/x/mychain/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 )
 
@@ -93,7 +93,7 @@ var (
 		consensustypes.ModuleName,
 		circuittypes.ModuleName,
 		// chain modules
-		ignitegettingstartmoduletypes.ModuleName,
+		mychainmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	}
 
@@ -118,7 +118,7 @@ var (
 		icatypes.ModuleName,
 		ibcfeetypes.ModuleName,
 		// chain modules
-		ignitegettingstartmoduletypes.ModuleName,
+		mychainmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	}
 
@@ -137,7 +137,7 @@ var (
 		icatypes.ModuleName,
 		ibcfeetypes.ModuleName,
 		// chain modules
-		ignitegettingstartmoduletypes.ModuleName,
+		mychainmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/endBlockers
 	}
 
@@ -294,8 +294,8 @@ var (
 				Config: appconfig.WrapAny(&circuitmodulev1.Module{}),
 			},
 			{
-				Name:   ignitegettingstartmoduletypes.ModuleName,
-				Config: appconfig.WrapAny(&ignitegettingstartmodulev1.Module{}),
+				Name:   mychainmoduletypes.ModuleName,
+				Config: appconfig.WrapAny(&mychainmodulev1.Module{}),
 			},
 			// this line is used by starport scaffolding # stargate/app/moduleConfig
 		},

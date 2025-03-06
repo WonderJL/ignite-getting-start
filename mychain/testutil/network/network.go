@@ -7,7 +7,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	"github.com/stretchr/testify/require"
 
-	"github.com/WonderJL/ignite-getting-start/app"
+	"mychain/app"
 )
 
 type (

@@ -1,4 +1,4 @@
-module github.com/WonderJL/ignite-getting-start
+module mychain
 
 go 1.23
 
